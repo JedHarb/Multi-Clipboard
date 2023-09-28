@@ -7,7 +7,8 @@ SendText(num){
 	if (Edit%num%) {
 		if WinActive("ClipboardGUI") {
 			Send {alt up}!{tab} ; If you're in the GUI, Alt+Tab back to the previous program.
-			Sleep 100 ; About how long the windows animation takes to Alt+Tab.
+			WinWaitNotActive, ClipboardGUI,, 2
+			Sleep 20
 		}
 		ClipSaved := ClipboardAll ; Save current clipboard contents to variable.
 		Clipboard := Edit%num% ; Change the clipboard to the selected text field.
