@@ -1,6 +1,6 @@
 			; AHK V1.1 32-bit
-#SingleInstance, Force	; Reloading the script replaces the previous running script without a prompt.
-SendMode Input		; Recommended for new scripts due to its superior speed and reliability.
+#SingleInstance Force	; Reloading the script replaces the previous running script without a prompt.
+SendMode, Input		; Recommended for new scripts due to its superior speed and reliability.
 
 SendText(num){
 	GuiControlGet, Edit%num% ; Get the text contents of the Edit(number) and save it as a variable also named Edit(number)
